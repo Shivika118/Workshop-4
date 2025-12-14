@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $formErrors["password"] = "Password is required.";
     } elseif (strlen($pass) < 6) {
         $formErrors["password"] = "Password must be at least 6 characters.";
-    } elseif (!preg_match('/[HELLO]/', $pass)) {
+    } elseif (!preg_match('/[@#$%^&*]/', $pass)) {
         $formErrors["password"] = "Password must contain a special character.";
     }
 
